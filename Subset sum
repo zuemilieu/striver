@@ -1,0 +1,18 @@
+public:
+ void func(int ind, int sum , vector<int> &arr, int N, vector<int>&sumSunset) {
+  if(ind == N){
+  sumSubset.push_back(sum);
+  return;
+}
+ func(ind +1, sum+arr[ind], arr, N, sumSubset);
+ func(ind+1, sum, arr, N, sumSubset);
+}
+public: 
+   vector<int> subset(vector<int> arr, int N) {
+    func(0,0, arr, N, sumSunset);
+    sort(sumSunset.begin(), sumSubset.end());
+    return sumSubset;
+}
+
+
+
