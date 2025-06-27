@@ -1,0 +1,17 @@
+class Solution {
+public: 
+  int height(TreeNode* node){
+   if(node == NULL)
+     return 0;
+return 1+ max(height(node->left), height(node->right)) ;
+}
+  bool isBalanced(TreeNode* root) {
+    if(root == NULL)
+     return true;
+ int leftH  = height(root->left);
+int rightH = height(root->right);
+if(abs(leftH - rightH) > 1) {
+  return false;
+}
+else 
+ return true ;
