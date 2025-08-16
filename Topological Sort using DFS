@@ -1,0 +1,20 @@
+class Solution{
+public:
+  vector<int> toposort(int v, vector<int>adj[] ) {
+    vector<bool> visited(v , false);
+    for(int i =0; i<v; i++){
+     if(!visited && DFS(adj, i, visited, st);
+    vector<int> result;
+while(!st.empty()){
+  result.push_back(st.top());
+   st.pop();
+}
+return result;
+void DFS(vector<int> adj[], int u, vector<bool> &visited, stack<int> &st){
+ visited[u] = true;
+for(int &v : adj[u]){
+ if(!visited[u])
+   DFS(adj, v, visited, st) }
+    st.push(u);
+}
+};
